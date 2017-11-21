@@ -1,13 +1,5 @@
 import React from 'react';
 
-// import { Link} from 'react-router-dom';
-// import pic1 from '../images/PopBallonsProject.png';
-// import pic2 from '../images/LearnTo.jpg';
-// import pic3 from '../images/homepagePic.jpg';
-// import pic4 from '../images/homepagePic.jpg';
-// import pic5 from '../images/homepagePic.jpg';
-// import pic6 from '../images/homepagePic.jpg';
-
 
 class HomePage extends React.Component {
   state = {
@@ -75,7 +67,14 @@ class HomePage extends React.Component {
   render() {
     return (
       <main>
-        <div style={{backgroundImage: 'url("../src/images/outsideview.jpg")', backgroundSize: 'cover', backgroundPositionX: 'center', backgroundPositionY: 'center'}} className="jumbotron">
+        <div
+          style={{
+            backgroundImage: 'url("../src/images/outsideview.jpg")',
+            backgroundSize: 'cover',
+            backgroundPositionX: 'center',
+            backgroundPositionY: 'center'
+          }}
+          className="jumbotron">
           <div className="container text-center">
             <h1>Tito Here...</h1>
             <p>Full Stack Web developer that loves art, music and travel.</p>
