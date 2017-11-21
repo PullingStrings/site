@@ -17,28 +17,32 @@ class HomePage extends React.Component {
         image: '../src/images/PopBallonsProject1.png',
         name: 'Project One',
         desc: 'This game pops balloons',
-        link: 'https://pop-the-balloons.herokuapp.com/'
+        link: 'https://pop-the-balloons.herokuapp.com/',
+        fontColor: 'white'
       },
       {
         key: 2,
         image: '../src/images/LearnToDanceProject2.png',
         name: 'Project Two',
         desc: 'This web app is a tool to learn how to dance',
-        link: 'https://learndancemzansi.herokuapp.com/'
+        link: 'https://learndancemzansi.herokuapp.com/',
+        fontColor: 'black'
       },
       {
         key: 3,
         image: '../src/images/LostandFoundPetsProject3.png',
         name: 'Project Three',
         desc: 'This app finds lost pets',
-        link: 'https://lost-and-found-pets.herokuapp.com/'
+        link: 'https://lost-and-found-pets.herokuapp.com/',
+        fontColor: 'white'
       },
       {
         key: 4,
         image: '../src/images/PlayGenProject4.png',
         name: 'Project Four',
         desc: 'This app generates playlists from nearby users',
-        link: 'https://playgenfinder.herokuapp.com/'
+        link: 'https://playgenfinder.herokuapp.com/',
+        fontColor: 'black'
       }
     ],
     projects_second: [
@@ -89,10 +93,10 @@ class HomePage extends React.Component {
               return (
                 <div key={project.key} className="col-sm-3">
                   <h1>{project.name}</h1>
-                  <p>{project.desc}</p>
+                  <p>{project.description}</p>
                   <a style={{textDecoration: 'none'}}href={project.link} target="_blank">
                     <div className="projectImage" style={{height: '20vh', background: `url(${project.image})`, backgroundSize: 'cover'}}>
-                      <p>{project.name}</p>
+                      <p style={{color: `${project.fontColor}`}}>{project.name}</p>
                     </div>
                   </a>
                 </div>
