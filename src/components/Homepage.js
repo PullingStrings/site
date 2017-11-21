@@ -10,7 +10,68 @@ import React from 'react';
 
 
 class HomePage extends React.Component {
-
+  state = {
+    projects_first: [
+      {
+        key: 1,
+        image: '../src/images/PopBallonsProject1.png',
+        name: 'Project One',
+        desc: 'This game pops balloons',
+        link: 'https://pop-the-balloons.herokuapp.com/'
+      },
+      {
+        key: 2,
+        image: '../src/images/LearnToDanceProject2.png',
+        name: 'Project Two',
+        desc: 'This web app is a tool to learn how to dance',
+        link: 'https://learndancemzansi.herokuapp.com/'
+      },
+      {
+        key: 3,
+        image: '../src/images/LostandFoundPetsProject3.png',
+        name: 'Project Three',
+        desc: 'This app finds lost pets',
+        link: 'https://lost-and-found-pets.herokuapp.com/'
+      },
+      {
+        key: 4,
+        image: '../src/images/PlayGenProject4.png',
+        name: 'Project Four',
+        desc: 'This app generates playlists from nearby users',
+        link: 'https://playgenfinder.herokuapp.com/'
+      }
+    ],
+    projects_second: [
+      {
+        key: 1,
+        image: '../src/images/NafasiArtSpaceProject.png',
+        name: 'Nafasi Art Space',
+        desc: 'Created a website for the organisation',
+        link: ''
+      },
+      {
+        key: 2,
+        image: '../src/images/CareYouthProject.png',
+        name: 'Care Youth',
+        desc: 'Did this project for the Care Youth Organisation',
+        link: ''
+      },
+      {
+        key: 3,
+        image: '../src/images/Standing.jpg',
+        name: 'Standing',
+        desc: 'Just me standing doing nothing',
+        link: ''
+      },
+      {
+        key: 4,
+        image: '../src/images/homepagePic.jpg',
+        name: 'Myself',
+        desc: 'Look at this sexy mofo',
+        link: ''
+      }
+    ]
+  }
   render() {
     return (
       <main>
@@ -20,56 +81,42 @@ class HomePage extends React.Component {
             <p>Full Stack Web developer that loves art, music and travel.</p>
           </div>
         </div>
+
         <div className="container-fluid bg-3 text-center">
           <h3>Some of my Work</h3>
           <div className="row">
-            <div className="col-sm-3">
-              <p>Some text..</p>
-              <img src="https://placehold.it/150x80?text=IMAGE"
-                className="img-responsive"  alt="Work"/>
-            </div>
-            <div className="col-sm-3">
-              <p>Some text..</p>
-              <img src="https://placehold.it/150x80?text=IMAGE"
-                className="img-responsive" alt="Work2"/>
-            </div>
-            <div className="col-sm-3">
-              <p>Some text..</p>
-              <img src="https://placehold.it/150x80?text=IMAGE"
-                className="img-responsive" alt="Work3"/>
-            </div>
-            <div className="col-sm-3">
-              <p>Some text..</p>
-              <img src="https://placehold.it/150x80?text=IMAGE"
-                className="img-responsive" alt="Work4"/>
-            </div>
+            {this.state.projects_first.map(project => {
+              return (
+                <div key={project.key} className="col-sm-3">
+                  <h1>{project.name}</h1>
+                  <p>{project.desc}</p>
+                  <a style={{textDecoration: 'none'}}href={project.link} target="_blank">
+                    <div className="projectImage" style={{height: '20vh', background: `url(${project.image})`, backgroundSize: 'cover'}}>
+                      <p>{project.name}</p>
+                    </div>
+                  </a>
+                </div>
+              );
+            })}
           </div>
         </div>
+
         <hr/>
+
         <div className="container-fluid bg-3 text-center">
           <div className="row">
-            <div className="col-sm-3">
-              <p>Some text..</p>
-              <img src="https://placehold.it/150x80?text=IMAGE"
-                className="img-responsive"  alt="Work5"/>
-            </div>
-            <div className="col-sm-3">
-              <p>Some text..</p>
-              <img src="https://placehold.it/150x80?text=IMAGE"
-                className="img-responsive"  alt="Work6"/>
-            </div>
-            <div className="col-sm-3">
-              <p>Some text..</p>
-              <img src="https://placehold.it/150x80?text=IMAGE"
-                className="img-responsive"  alt="Work7"/>
-            </div>
-            <div className="col-sm-3">
-              <p>Some text..</p>
-              <img src="https://placehold.it/150x80?text=IMAGE"
-                className="img-responsive" alt="Work8"/>
-            </div>
+            {this.state.projects_second.map(project => {
+              return (
+                <div key={project.key} className="col-sm-3">
+                  <h1>{project.name}</h1>
+                  <p>{project.desc}</p>
+                  <img src={project.image} />
+                </div>
+              );
+            })}
           </div>
         </div>
+
         <footer>
           <p>Get in touch with me here</p>
           <i className="fa fa-github" aria-hidden="true"></i>
