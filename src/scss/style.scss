@@ -1,14 +1,21 @@
 /* global */
 * {
   box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
 }
+
+p {
+  font-weight: 200;
+  font-size: medium;
+}
+
 img {
   max-width: 100%;
 }
 
 /* body */
 footer {
-  margin-top: 50vh;
+  margin-top: 12px;
   background-color: black;
   color: white;
   text-align: center;
@@ -24,6 +31,7 @@ footer {
 
 .navbar-default {
   background-color: white;
+  color: black;
 }
 .navbar {
   border: none;
@@ -33,10 +41,15 @@ footer {
   float: right;
 }
 
+.container-fluid {
+  color: black;
+}
+
 .projectImage {
   display: flex;
   justify-content: center;
   align-items: center;
+
   p {
     opacity: 0;
     font-size: 50px;
@@ -45,7 +58,6 @@ footer {
     p {
       transition: 0.5s;
       opacity: 1;
-      animation: 0.4s pulse infinite;
     }
   }
 }

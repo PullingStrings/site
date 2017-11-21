@@ -21,7 +21,7 @@ class App extends React.Component {
               </div>
               <ul className="nav navbar-nav">
                 <li><Link to="/" className="navbar-item">Home</Link></li>
-                <li><Link to="/about" className="navbar-item">About</Link></li>
+                <li><Link to="/about" className="navbar-item">About Me</Link></li>
                 <li><Link to="/projects" className="navbar-item">Projects</Link></li>
                 <li><Link to="/experience" className="navbar-item">Experience</Link></li>
               </ul>
