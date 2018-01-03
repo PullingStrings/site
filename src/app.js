@@ -17,7 +17,7 @@ class App extends React.Component {
           <nav className="navbar navbar-default">
             <div className="container-fluid">
               <div className="navbar-header">
-                <a className="navbar-brand" href="/">Sibusiso Tito Zwane</a>
+                <a className="navbar-brand" href="/">Time Line</a>
               </div>
               <ul className="nav navbar-nav">
                 <li><Link to="/" className="navbar-item">Home</Link></li>
