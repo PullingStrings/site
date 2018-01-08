@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Auth from '../lib/Auth';
-import Login from './auth/Login';
-import Register from './auth/Register';
 
 const Navbar = ({ history }) => {
 
@@ -22,9 +20,9 @@ const Navbar = ({ history }) => {
         <ul className="nav navbar-nav">
           <li><Link to="/" className="navbar-item">Home</Link></li>
           <li>{!Auth.isAuthenticated() &&
-            <Link to={Login} className="standard-button">Login</Link>}</li>
+            <Link to="/login" className="standard-button">Login</Link>}</li>
           <li>{!Auth.isAuthenticated() &&
-            <Link to={Register} className="standard-button">Register</Link>}</li>
+            <Link to="/register" className="standard-button">Register</Link>}</li>
           <li>{Auth.isAuthenticated() && <a href="#" onClick={logout} className="standard-button">Logout</a>}</li>
         </ul>
       </div>

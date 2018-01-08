@@ -5,18 +5,14 @@
   "main": "server.js",
   "license": "MIT",
   "scripts": {
-    "homepage": "https://PullingStrings.github.io/site",
-    "deploy": "npm run build&&gh-pages -d build",
     "start": "yarn build && node index",
     "start:client": "webpack-dev-server",
     "start:server": "nodemon",
     "build": "webpack -p",
-    "seed": "node db/seeds",
-    "test:client": "node_modules/.bin/_mocha test/client/helper \"test/client/**/*_test.js\"",
-    "test:server": "node_modules/.bin/_mocha \"test/api/**/*_test.js\"",
-    "test": "yarn test:server && yarn test:client"
+    "seed": "node db/seeds"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "body-parser": "^1.18.1",
     "bootstrap-css-only": "^3.3.7",
     "express": "^4.15.4",
@@ -24,6 +20,7 @@
     "mongoose": "^4.11.12",
     "mongoose-unique-validator": "^1.0.6",
     "morgan": "^1.8.2",
+    "nodemon": "^1.14.9",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.2.2"
